@@ -1,94 +1,115 @@
+
 # ShaktiSetu
+
+> **Developed by Akanksha** — Empowering safety, one tap at a time.
 
 ShaktiSetu is an Android safety application focused on emergency response and personal security. It provides fast SOS activation, emergency contact workflows, live location sharing, and safety utilities like fake calls and evidence capture.
 
-## Key Features
+---
 
-- **One-tap SOS flow** with countdown and PIN-based dismiss
-- **Emergency SMS alerts** with live OpenStreetMap location links
-- **Live SOS status sync** to Firebase Firestore
-- **Automatic evidence capture** (photo + audio) during SOS
-- **Emergency contacts management** using local Room database
-- **Fake call simulation** for unsafe situations
-- **Quick emergency dialing** (police/ambulance/women helpline)
-- **Push notifications** using Firebase Cloud Messaging
-- **Authentication** with email/password and Google sign-in
+## ✨ Key Features
 
-## Tech Stack
+- 🆘 **One-tap SOS flow** with countdown and PIN-based dismiss
+- 📍 **Emergency SMS alerts** with live OpenStreetMap location links
+- 🔥 **Live SOS status sync** to Firebase Firestore
+- 📸 **Automatic evidence capture** (photo + audio) during SOS
+- 👥 **Emergency contacts management** using local Room database
+- 📞 **Fake call simulation** for unsafe situations
+- 🚨 **Quick emergency dialing** — Police, Ambulance & Women Helpline
+- 🔔 **Push notifications** using Firebase Cloud Messaging
+- 🔐 **Authentication** with Email/Password and Google Sign-In
 
-- **Language:** Kotlin
-- **UI:** Jetpack Compose + Android Views/ViewBinding (hybrid)
-- **Architecture components:** AndroidX Lifecycle
-- **Local storage:** Room
-- **Backend services:** Firebase Auth, Firestore, Storage, Cloud Messaging
-- **Location & maps:** Google Play Services Location, osmdroid (OpenStreetMap)
-- **Camera/media:** CameraX, MediaRecorder
-- **Build system:** Gradle (Kotlin DSL)
+---
 
-## Requirements
+## 🛠️ Tech Stack
 
-- Android Studio (latest stable recommended)
-- Android SDK:
-  - `compileSdk = 35`
-  - `minSdk = 29`
-  - `targetSdk = 35`
-- JDK 21 (project uses Gradle toolchain resolution)
+| Layer | Technology |
+|---|---|
+| Language | Kotlin |
+| UI | Jetpack Compose + ViewBinding (Hybrid) |
+| Architecture | AndroidX Lifecycle |
+| Local Storage | Room Database |
+| Backend | Firebase Auth, Firestore, Storage, FCM |
+| Location & Maps | Google Play Services, osmdroid (OpenStreetMap) |
+| Camera / Media | CameraX, MediaRecorder |
+| Build System | Gradle (Kotlin DSL) |
+
+---
+
+## 📋 Requirements
+
+- Android Studio (latest stable)
+- Android SDK: `compileSdk = 35`, `minSdk = 29`, `targetSdk = 35`
+- JDK 21
 - Firebase project configured for Android
 
-## Project Setup
+---
 
-1. **Clone the repository** and open it in Android Studio.
-2. **Firebase setup**
-   - Create/choose a Firebase project.
-   - Register Android app with package name: `com.example.shaktisetu`.
-   - Add your `google-services.json` to:
-     - `/tmp/workspace/harsharma-me/ShaktiSetu/app/google-services.json`
-3. **Maps/API configuration**
-   - Add your Google Maps API key in `AndroidManifest.xml` (if required for your flows).
-4. **Sync Gradle** from Android Studio.
-5. **Run on a real device** (recommended for SMS/call/location/camera behavior).
+## 🚀 Project Setup
 
-## Build and Run
+1. **Clone the repository** and open in Android Studio
+2. **Firebase Setup**
+   - Create or choose a Firebase project
+   - Register Android app with package name: `com.example.shaktisetu`
+   - Place `google-services.json` inside the `/app` directory
+3. **Maps Configuration**
+   - Add your Google Maps API key in `AndroidManifest.xml`
+4. **Sync Gradle** from Android Studio
+5. **Run on a real device** (recommended for SMS, calls, location & camera)
 
-From project root:
+---
+
+## 🔧 Build & Run
 
 ```bash
 ./gradlew assembleDebug
 ```
 
-Install and run from Android Studio, or use adb with the generated APK.
+Or run directly from Android Studio using the **Run** button.
 
-## Useful Gradle Commands
+### Useful Gradle Commands
 
 ```bash
-./gradlew test
-./gradlew lint
-./gradlew assembleDebug
+./gradlew test          # Run unit tests
+./gradlew lint          # Run lint checks
+./gradlew assembleDebug # Build debug APK
 ```
 
-## Permissions Used
+---
 
-The app requests permissions for:
+## 🔑 Permissions Used
 
-- Internet/network access
-- Location (fine/coarse)
-- SMS and phone calls
-- Camera and audio recording
-- Notifications
-- Vibration
+| Permission | Purpose |
+|---|---|
+| Internet / Network | Firebase & location sync |
+| Fine & Coarse Location | Live location sharing |
+| SMS & Phone Calls | Emergency alerts & dialing |
+| Camera & Audio | Evidence capture during SOS |
+| Notifications | Push alerts via FCM |
+| Vibration | SOS feedback |
 
-Grant runtime permissions to use full emergency functionality.
+> Grant all runtime permissions for full emergency functionality.
 
-## Important Notes
+---
 
-- This app is safety-critical; test emergency flows carefully before production use.
-- Some features (SMS/call/location/background behavior) work best on physical devices.
-- Firebase rules and production hardening should be reviewed before public release.
+## ⚠️ Important Notes
 
-## Package Name
+- This app is **safety-critical** — test all emergency flows carefully before production use
+- SMS, call, location, and background features work best on **physical devices**
+- Review Firebase security rules before any public release
+
+---
+
+## 📦 Package Name
 
 `com.example.shaktisetu`
 
 ---
 
-If you want, I can also add sections for screenshots, architecture diagram, contribution guide, and release checklist.
+## 👩‍💻 Developer
+
+**Akanksha** — Built with purpose, passion, and care for women's safety.
+
+---
+
+*ShaktiSetu — Bridging the gap between danger and safety.*
